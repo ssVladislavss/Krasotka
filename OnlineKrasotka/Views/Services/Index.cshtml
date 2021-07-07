@@ -1,0 +1,28 @@
+﻿@model IQueryable<ThingItem>
+
+@{ 
+    TextField textField = ViewBag.TextField;
+
+    ViewBag.Title = textField.MetaName;
+    ViewBag.Description = textField.MetaDescription;
+    ViewBag.Keywords = textField.MetaKeywords;
+}
+
+<div>
+    @if(Model.Any())
+            {
+                <ul class="big-image-list">
+                    @foreach (ThingItem item in Model)
+                    {
+                        <li>
+                            <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">
+                                <img src="~/images/@item.TitleImagesPath" alt="" class="left" />
+                            </a>
+                            <h4>@item.Name</h4>
+                            <p>@item.ShortDesk</p>
+                            <a class="cke_btn_locked" asp-area="" asp-controller="Cart" asp-action="addToBasket"asp-route-id="@item.Id">Добавить в корзину</a>
+                        </li>
+                    }
+                </ul>
+            }
+</div>

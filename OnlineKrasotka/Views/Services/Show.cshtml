@@ -1,0 +1,19 @@
+﻿@model ThingItem
+
+@{ 
+    ViewBag.Title = Model.MetaName;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+<div>
+    <h2>@Model.Name</h2>
+    <h3>@Model.ShortDesk</h3>
+    <div>
+        <img class="img-block" src="~/images/@Model.TitleImagesPath" />
+    </div>
+    <a class="cke_btn_locked" asp-area="" asp-controller="Cart" asp-action="addToBasket" asp-route-id="@Model.Id">Добавить в корзину</a>
+</div>
+<div>
+    @Html.Raw(Model.LongDesk)
+</div>

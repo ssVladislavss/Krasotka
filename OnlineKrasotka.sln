@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineKrasotka", "OnlineKrasotka\OnlineKrasotka.csproj", "{88561C9D-166E-42C9-95DB-43FBA8EFA53C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88561C9D-166E-42C9-95DB-43FBA8EFA53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88561C9D-166E-42C9-95DB-43FBA8EFA53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88561C9D-166E-42C9-95DB-43FBA8EFA53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88561C9D-166E-42C9-95DB-43FBA8EFA53C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6D1591C-2BB6-43E3-9016-F51B27C45291}
+	EndGlobalSection
+EndGlobal

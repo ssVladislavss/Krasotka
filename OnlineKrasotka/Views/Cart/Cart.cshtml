@@ -1,0 +1,28 @@
+﻿@model AllThingsBasketViewModel
+<div class="container">
+    @{
+        foreach (var basket in Model.Basket.ListShopItems)
+        {
+            <div class="alert alert-warning mt-3">
+                <b>Товар: </b>@basket.ThingCart.Name<br />
+                <b>Количество: </b>@basket.Quantity <a asp-controller="Cart" asp-action="additemToCart" asp-route-id="@basket.Id">+</a><a asp-controller="Cart" asp-action="subtractionToCart" asp-route-id="@basket.Id">-</a><br />
+                <b>Цена: </b>@basket.PriceCart.ToString("c")<br />
+                <a class="btn btn-danger" asp-controller="Cart" asp-action="removeToCart" asp-route-id="@basket.Id">Удалить</a>
+            </div>
+        }
+    }
+    @{
+        if (Model.Basket.ListShopItems.Count == 0)
+        {
+            <b>Корзина пуста</b>
+        }
+        else
+        {
+            <div class="alert alert-warning mt3">
+                <b>Общая сумма товаров:</b>@Model.FullSumCart.ToString("c")
+            </div>
+            <hr />
+            <a class="btn btn-danger" asp-area="" asp-controller="Order" asp-action="Checkout" asp-route-id="">Оплатить</a>
+        }
+    }
+</div>
